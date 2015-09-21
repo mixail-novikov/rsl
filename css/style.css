@@ -1,0 +1,154 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*
+Paul Irish
+http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+*/
+html {
+  box-sizing: border-box; }
+
+*,
+*:before,
+*.after {
+  box-sizing: inherit; }
+
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+/* global susy settings */
+html, body {
+  background: #fff; }
+
+hr {
+  height: 1px;
+  border: 0;
+  padding: 0;
+  width: 100%;
+  margin: 20px 0;
+  background: #000; }
+
+img {
+  max-width: 100%; }
+
+html, body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  color: #000; }
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "Times New Roman", serif;
+  font-weight: bold;
+  color: #000;
+  line-height: 1.3;
+  margin-bottom: .5em; }
+
+h1 {
+  font-size: 45px; }
+
+h2 {
+  font-size: 28px; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 13px; }
+
+strong, b {
+  font-weight: bold; }
+
+em {
+  font-style: italic; }
+
+p {
+  line-height: 1.5;
+  margin-bottom: .5em; }
+
+p.p-small-size {
+  font-size: 0.8em; }
+
+p.p-align-center {
+  text-align: center; }
+
+p.p-align-right {
+  text-align: right; }
+
+.b-list {
+  line-height: 1.5;
+  margin-bottom: .5em; }
+  .b-list .list-item {
+    margin-bottom: 3px; }
+    .b-list .list-item:last-of-type {
+      margin-bottom: 0; }
+  .b-list.list-with-dash .list-item:before {
+    content: '\2014';
+    margin-right: 6px; }
+
+a {
+  color: #275cc7; }
+  a:hover {
+    color: #4677db; }
+  a.link-as-text {
+    color: inherit;
+    text-decoration: inherit; }
+    a.link-as-text:hover {
+      color: inherit; }
+
+.b-icon {
+  display: inline-block;
+  background-image: url("../img/sprite.png");
+  vertical-align: middle; }
+  .b-icon.icon-man {
+    width: 50px;
+    height: 50px;
+    background-position: 0px 0px; }
+  .b-icon.icon-rabbit {
+    width: 50px;
+    height: 50px;
+    background-position: -55px 0px; }

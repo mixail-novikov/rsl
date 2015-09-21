@@ -1,0 +1,21 @@
+.b-list {
+  line-height: 1.5;
+  margin-bottom: .5em;
+
+  .list-item {
+    margin-bottom: 3px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &.list-with-dash {
+    .list-item {
+      &:before {
+        content: '\2014';
+        margin-right: 6px;
+      }
+    }
+  }
+}
