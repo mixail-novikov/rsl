@@ -1,8 +1,8 @@
 a {
-  color: #275cc7;
+  color: #fff;
 
   &:hover {
-    color: lighten(#275cc7, 10%);
+    color: darken(#fff, 10%);
   }
 
   &.link-as-text {

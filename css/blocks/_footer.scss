@@ -1,0 +1,37 @@
+.b-footer {
+  border-top: 1px solid #3b3b3c;
+
+  .footer {
+    &-wrapper {
+      @include container();
+      border-top: 1px solid #ffbb03;
+      margin-top: -1px;
+      @include padding(31px null);
+    }
+
+    &-copyright {
+      @include span(1 of 2);
+      padding-top: 5px;
+      font-family: $minion;
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+
+    &-social {
+      @include span(1 of 2);
+      text-align: right;
+    }
+
+    @media (max-width: 760px) {
+      &-copyright,
+      &-social {
+        @include span(full);
+        text-align:  center;
+      }
+
+      &-copyright {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}

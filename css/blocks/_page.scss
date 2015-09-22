@@ -1,0 +1,7 @@
+.b-page {
+  &.page-main {
+    @include loadBg {
+      background: url($img + 'big-bg.png') no-repeat center;
+    }
+  }
+}

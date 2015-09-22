@@ -1,0 +1,56 @@
+.b-contacts {
+  .contacts-content {
+    @include margin(null -1*gutter());
+
+    .contacts-item {
+      @include span(1 of 4);
+
+      + .contacts-item {
+        border-left: 1px dashed #3b3b3c;
+      }
+
+      &.item-wider {
+        @include span(1 of 2);
+      }
+
+      &-icon {
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+        margin-bottom: 35px;
+      }
+
+      &-content {
+        font-family: $minion;
+        font-style: italic;
+        font-size: 24px;
+        color: #7a7a7a;
+        text-align: center;
+        text-transform: uppercase;
+        line-height: normal;
+      }
+
+      @media (max-width: 890px) {
+        @include span(1 of 2);
+
+        &.item-wider {
+          @include span(full);
+          margin-bottom: 15px;
+
+          + .contacts-item {
+            border-left: none;
+          }
+        }
+      }
+
+      @media (max-width: 490px) {
+        @include span(full);
+        margin-bottom: 15px;
+        + .contacts-item {
+          border-top: 1px dashed #3b3b3c;
+          padding-top: 15px;
+        }
+      }
+    }
+  }
+}

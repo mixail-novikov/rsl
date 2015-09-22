@@ -1,9 +1,11 @@
+$img: '../img/';
 
 /* global susy settings */
 $susy: (
   columns: 12,
+  column-width: 70px,
   gutters: 30/70,
-  gutter-position: split,
+  gutter-position: inside-static,
   container: 1200px,
   global-box-sizing: border-box,
   output: float

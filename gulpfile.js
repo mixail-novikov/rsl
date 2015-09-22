@@ -40,7 +40,7 @@ gulp.task('sprite', function() {
 });
 
 gulp.task('imagemin', function() {
-    return gulp.src(['./img/**/*', '!img/icons/**/*'])
+    return gulp.src(['./img/**/*.{png,gif,jpg,jpeg}', '!img/icons/**/*'])
         .pipe($.plumber({errorHandler: $.notify.onError()}))
         .pipe($.imagemin())
         .pipe(gulp.dest('./img/'));

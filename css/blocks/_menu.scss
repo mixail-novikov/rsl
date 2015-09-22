@@ -1,0 +1,32 @@
+.b-menu {
+  &.menu-header-main {
+    .menu {
+      &-list {
+        padding: 0 40px;
+        text-align: justify;
+
+        &:before {
+          content: '';
+          display: block;
+          width: 100%;
+        }
+
+        &:after {
+          content: '';
+          display: inline-block;
+          width: 100%;
+        }
+      }
+
+      &-item {
+        display: inline-block;
+      }
+
+      &-link {
+        font-size: 20px;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
