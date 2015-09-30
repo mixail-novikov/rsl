@@ -1,0 +1,90 @@
+.b-card {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+  z-index: 1;
+
+  &:before {
+    content: '';
+    position: absolute;
+    right: 6px;
+    top: 6px;
+    @extend .b-icon;
+    @extend .b-icon.icon-card-checkbox;
+    z-index: 10;
+  }
+
+  @include with-layout(no-gutters) {
+    .card-image {
+      @include span(55%);
+    }
+
+    .card-content {
+      @include span(45%);
+    }
+  }
+
+  .card-content {
+    height: 100%;
+    background: #362b0f;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .card-vertical {
+    display: table;
+    width: 100%;
+    height: 100%;
+
+    &-cell {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+
+  .card-title {
+    display: block;
+    position: relative;
+    font-family: $headingFont;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 13px;
+    margin-bottom: 15px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      display: block;
+      height: 1px;
+      width: 80px;
+      background: rgba(#fff, 0.5);
+      left: 50%;
+      bottom: 0;
+      margin-left: -40px;
+    }
+  }
+
+  .card-desc {
+    font-family: $minion;
+    font-style: italic;
+    font-size: 12px;
+  }
+
+  .card-image {
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .card-link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+  }
+}

@@ -1,0 +1,16 @@
+.b-button {
+  cursor: pointer;
+  background: #362b0f;
+  padding: 20px;
+  font-family: $minion;
+  font-size: 18px;
+  font-style: italic;
+  text-transform: uppercase;
+  text-align: center;
+  border: none;
+  color: #fff;
+
+  &:hover {
+    background: lighten(#362b0f, 10%);
+  }
+}

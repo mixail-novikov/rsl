@@ -2,9 +2,14 @@
 
 @import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
 @import "../bower_components/susy/sass/susy";
+@import "../bower_components/slick-carousel/slick/slick";
+@import "../bower_components/magnific-popup/src/css/main";
+@import "../bower_components/pickmeup/css/pickmeup";
+
 
 @import "vendor/reset";
 @import "vendor/box-sizing";
+@import "vendor/pickmeup";
 
 @import "mixins";
 @import "sprite";

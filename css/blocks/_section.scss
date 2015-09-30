@@ -7,6 +7,7 @@
 
   .section-heading {
     text-align: center;
+    text-transform: uppercase;
     margin-bottom: 36px;
 
     &-subtitle {
@@ -30,5 +31,33 @@
   .section-content {
     @include clearfix;
     @include span(full);
+
+    &.content-more {
+      text-align: center;
+      margin-top: 34px;
+    }
+  }
+
+  .section-more-button {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    font-family: $minion;
+    font-style: italic;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-top: 70px;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: -70px;
+      left: 50%;
+      margin-left: -23px;
+      @extend .b-icon;
+      @extend .b-icon.icon-load-more;
+    }
   }
 }

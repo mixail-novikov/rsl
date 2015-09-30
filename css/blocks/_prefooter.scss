@@ -57,6 +57,7 @@
           @include span(full);
 
           + .prefooter-item-holder {
+            border-left: none;
             border-top: 1px dashed #3b3b3c;
           }
         }

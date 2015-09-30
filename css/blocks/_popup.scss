@@ -1,0 +1,58 @@
+.b-popup {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  background: #000;
+  padding: 40px;
+
+  .mfp-close {
+    @extend .b-icon;
+    @extend .b-icon.icon-popup-close;
+    overflow: hidden;
+    text-indent: 100%;
+    right: 20px;
+    top: 20px;
+  }
+
+  &.popup-book {
+
+  }
+
+  &.popup-personal {
+    @media (max-width: 700px) {
+      padding: 15px;
+    }
+
+    .popup {
+      &-name {
+        font-family: $headingFont;
+        font-size: 35px;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+        padding-top: 20px;
+        margin-bottom: 20px;
+      }
+
+      &-info {
+        font-family: $minion;
+        font-size: 24px;
+        font-style: italic;
+        text-align: center;
+        margin-bottom: 25px;
+      }
+
+      &-image {
+        text-align: center;
+        margin-bottom: 35px;
+      }
+
+      &-text {
+        font-family: $minion;
+        font-style: italic;
+        font-size: 16px;
+        color: #7a7a7a;
+      }
+    }
+  }
+}

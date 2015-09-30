@@ -1,0 +1,42 @@
+.b-news {
+  .news-item {
+    position: relative;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &-title,
+    &-desc {
+      position: absolute;
+      left: 10%;
+      right: 10%;
+      text-align: center;
+    }
+
+    &-title {
+      bottom: 200px;
+      margin-bottom: 36px;
+    }
+
+    &-desc {
+      top: 200px;
+      margin-top: 40px;
+      font-family: $minion;
+      font-style: italic;
+      font-size: 24px;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 200px;
+      margin-top: -2px;
+      height: 4px;
+      width: 100px;
+      background: #fff;
+      left: 50%;
+      margin-left: -50px;
+    }
+  }
+}

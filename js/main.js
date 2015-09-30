@@ -1,5 +1,79 @@
 $(document).ready(function() {
+    // news slider
+    (function() {
+        var $slider = $('.b-slider.slider-news');
 
+        $slider.slick({
+            slidesToShow: 3,
+            swipeToSlide: true,
+            arrows: false,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                },
+                {
+                    breakpoint: 680,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+    })();
+
+    // kitchen slider
+    (function() {
+
+        var $slider = $('.b-slider.slider-kitchen .slider-list');
+
+        $slider.each(function() {
+
+            var $this = $(this);
+
+            $this.slick({
+                arrows: true,
+                nextArrow: '<div class="slider-nav nav-right"></div>',
+                prevArrow: '<div class="slider-nav nav-left"></div>',
+                slidesToShow: 2,
+                responsive: [
+                    {
+                        breakpoint: 850,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+
+        });
+
+    })();
+
+    //popup
+    (function() {
+
+        var $popup = $('.js-popup');
+
+        $popup.each(function() {
+
+            var $this = $(this);
+            if ($this.hasClass('popup-ajax')) {
+                $this.magnificPopup({
+                    type: 'ajax',
+                    callbacks: {
+                        ajaxContentAdded: function() {
+                            console.log('ok');
+                            $('.js-pickmeup').pickmeup();
+                        }
+                    }
+                });
+            }
+        });
+
+    })();
 });
 
 $(window).load(function() {

@@ -47,6 +47,7 @@
         @include span(full);
         margin-bottom: 15px;
         + .contacts-item {
+          border-left: none;
           border-top: 1px dashed #3b3b3c;
           padding-top: 15px;
         }

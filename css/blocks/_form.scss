@@ -1,0 +1,39 @@
+.b-form {
+
+  .form {
+    &-input {
+      height: 80px;
+      line-height: 80px;
+      border: 1px solid rgba(#fff, 0.7);
+      font-family: $minion;
+      font-style: italic;
+      font-size: 18px;
+      text-transform: uppercase;
+      color: #fff;
+      background: #000;
+      padding-left: 10px;
+    }
+  }
+
+  &.form-book {
+    max-width: 500px;
+    margin: 0 auto;
+
+    .form {
+      &-input {
+        display: block;
+        width: 100%;
+        margin-bottom: 50px;
+      }
+
+      &-button {
+        width: 100%;
+
+        &-holder {
+          display: block;
+          padding: 0 35px;
+        }
+      }
+    }
+  }
+}

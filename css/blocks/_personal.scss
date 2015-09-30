@@ -1,0 +1,94 @@
+.b-personal {
+
+  .personal {
+    &-content {
+      @include padding(null 0);
+    }
+
+    &-item {
+      position: relative;
+      @include span(full);
+
+      @media (min-width: 901px) {
+        @include gallery(1 of 4);
+      }
+
+      @media (max-width: 900px) and (min-width: 601px) {
+        @include gallery(1 of 3);
+      }
+
+      @media (max-width: 600px) and (min-width: 450px) {
+        @include gallery(1 of 2);
+      }
+
+      margin-bottom: 2*gutter();
+    }
+
+    &-link {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 10;
+
+      &:active,
+      &:focus {
+        outline: none!important;
+      }
+    }
+
+    &-image {
+      position: relative;
+      height: 0;
+      padding-bottom: 240*100%/262.5;
+
+      &-src {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+      }
+    }
+
+    &-caption {
+      padding: 12px;
+      background: #362b0f;
+    }
+
+    &-name {
+      position: relative;
+      font-family: $headingFont;
+      font-weight: bold;
+      font-size: 14px;
+      text-transform: uppercase;
+      text-align: center;
+      padding-bottom: 10px;
+      margin-bottom: 8px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        margin-left: -40px;
+        width: 80px;
+        height: 1px;
+        background: rgba(#fff, 0.5);
+      }
+    }
+
+    &-info {
+      font-family: $minion;
+      font-size: 14px;
+      font-style: italic;
+      text-align: center;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+}

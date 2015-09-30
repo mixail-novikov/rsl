@@ -1,0 +1,39 @@
+.b-grid {
+  .grid-holder {
+    @include margin(null -1*gutter());
+  }
+
+  @include with-layout(no-gutters) {
+    &.grid-1-of-3 {
+      .grid-item {
+        @include span(full);
+
+        @media (min-width: 950px) {
+          @include gallery(1 of 3);
+        }
+
+        @media (max-width: 949px) and (min-width: 650px) {
+          @include gallery(1 of 2);
+        }
+      }
+    }
+
+    &.grid-1-of-4 {
+      .grid-item {
+        @include span(full);
+
+        @media (min-width: 1200px) {
+          @include gallery(1 of 4);
+        }
+
+        @media (max-width: 1199px) and (min-width: 950px) {
+          @include gallery(1 of 3);
+        }
+
+        @media (max-width: 949px) and (min-width: 650px) {
+          @include gallery(1 of 2);
+        }
+      }
+    }
+  }
+}

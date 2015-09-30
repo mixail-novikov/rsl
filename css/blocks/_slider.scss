@@ -1,0 +1,116 @@
+.b-slider {
+  &.slider-kitchen {
+    overflow: hidden;
+
+    .slider {
+
+      &-nav {
+        position: absolute;
+        top: 0;
+        @extend .b-icon;
+        z-index: 1;
+        cursor: pointer;
+
+        &.nav-left {
+          left: 50%;
+          margin-left: -50px;
+          @extend .b-icon.icon-slider-arrow-left;
+        }
+
+        &.nav-right {
+          right: 50%;
+          margin-right: -50px;
+          @extend .b-icon.icon-slider-arrow-right;
+        }
+      }
+
+      &-item {
+        height: 0;
+        padding-bottom: 400*100%/600;
+        margin-bottom: 95px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        &-holder {
+          position: relative;
+
+          &:active,
+          &:focus {
+            outline: 0!important;
+          }
+
+          &:hover {
+            .slider-overlay {
+              @include transform(translateY(0));
+              bottom: 0;
+            }
+          }
+        }
+      }
+
+      &-overlay {
+        position: relative;
+        background: #362b0f;
+        @include transform(translateY(100%));
+        @include transition(0.1s transform linear);
+        padding: 20px;
+        max-width: 266px;
+        margin: 0 auto;
+
+        &-holder {
+          position: absolute;
+          left: 0; right: 0;
+          bottom: 0;
+        }
+      }
+
+      &-list {
+        @include container();
+        padding-top: 112px;
+      }
+
+      &-name {
+        position: relative;
+        font-family: $headingFont;
+        font-size: 14px;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+        padding-bottom: 13px;
+        margin-bottom: 15px;
+
+        &:after {
+          position: absolute;
+          content: '';
+          width: 80px;
+          height: 1px;
+          bottom: 0;
+          left: 50%;
+          margin-left: -40px;
+          background: rgba(#fff, 0.5);
+        }
+      }
+
+      &-caption {
+        font-family: $minion;
+        font-style: italic;
+        font-size: 14px;
+        text-align: center;
+      }
+
+      &-link {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 10;
+      }
+    }
+
+    .slick-list {
+      overflow: visible;
+    }
+  }
+}
