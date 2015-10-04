@@ -1,0 +1,76 @@
+.b-offcanvas {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  .offcanvas-menu {
+    position: absolute;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    bottom: 0;
+    background: #000;
+  }
+
+  .offcanvas-content {
+    position: relative;
+    width: 100%;
+    @include transform(translateX(0));
+    @include transition(0.3s transform ease);
+
+    padding-top: 1px;  //
+    margin-top: -1px;  // mozilla fix
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background: #fff;
+      opacity: 0;
+      @include transition(none);
+      z-index: -1000;
+    }
+  }
+
+  .offcanvas-address {
+    padding: gutter();
+
+    &-item {
+      margin-bottom: gutter();
+    }
+
+    &-icon {
+      position: relative;
+      top: -2px;
+      margin-right: 15px;
+    }
+
+    &-link {
+      text-decoration: none;
+    }
+  }
+
+  .offcanvas-social {
+    padding: 0 5px;
+  }
+
+  @media (max-width: 1130px) {
+    &.is-open {
+      .offcanvas-content {
+        @include transform(translateX(-300px));
+
+        &:before {
+          display: block;
+          opacity: 0.3;
+          z-index: 1000;
+          @include transition(.3s opacity ease);
+
+        }
+      }
+    }
+  }
+}

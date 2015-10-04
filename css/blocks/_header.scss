@@ -74,17 +74,24 @@
         margin-top: 62px;
       }
     }
+
+    .header-switcher {
+      &-holder {
+        display: none;
+      }
+    }
   }
 
   &.header-inner {
     .header-logo {
+      margin-top: 8px;
       display: inline-block;
       width: 147px;
       height: 71px;
       background: url($img + 'logo-inner.png') no-repeat;
 
       &-holder {
-        @include span(160px);
+        @include span(190px);
         position: relative;
         z-index: 1;
       }
@@ -93,20 +100,95 @@
     .header-menu {
       &-holder {
         @include span(full);
-        @include margin(null nul null -1*span(160px wide));
-        @include padding(null null null span(160px wide));
+        @include margin(null -1*span(370px) null -1*span(190px));
+        @include padding(null span(370px) null span(190px));
       }
     }
 
     .header-contacts {
-      &-holder {
+      margin-top: 17px;
 
+      &-link {
+        text-decoration: none;
+      }
+
+      &-item {
+        + .header-contacts-item {
+          margin-top: 13px;
+        }
+      }
+
+      &-icon {
+        position: relative;
+        top: -2px;
+        margin-right: 11px;
+      }
+
+      &-holder {
+        @include span(200px);
       }
     }
 
     .header-social {
-      &-holder {
+      margin-top: 26px;
+      overflow: hidden;
 
+      &-holder {
+        @include span(170px no-gutters);
+      }
+    }
+
+    .header-switcher {
+      &-holder {
+        display: none;
+      }
+    }
+  }
+
+  &.header-main,
+  &.header-inner {
+    @media (max-width: 1130px) {
+      padding: 15px 0 50px;
+      border-bottom: 0;
+      position: relative;
+      margin-bottom: -45px;
+
+      .header-wrapper {
+        border-bottom: 0;
+      }
+
+      .header-switcher {
+        cursor: pointer;
+
+        &-holder {
+          display: block;
+          position: absolute;
+          right: 34px;
+          top: 31px;
+          z-index: 10;
+        }
+      }
+
+      .header-logo {
+        background: url($img + 'logo-small.png') no-repeat;
+        width: 207px;
+        height: 100px;
+        margin: 0;
+
+        &-holder {
+          @include span(full);
+          margin: 0;
+          padding: 0;
+          text-align: center;
+        }
+      }
+
+      .header-contacts,
+      .header-social,
+      .header-menu {
+        &-holder {
+          display: none;
+        }
       }
     }
   }

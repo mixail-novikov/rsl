@@ -72,6 +72,41 @@ $(document).ready(function() {
                 });
             }
         });
+    })();
+
+    // offcanvas menu
+    (function() {
+
+        var $menuSwitcher = $('.js-offcanvas-button'),
+            $menuInstance = $('.b-offcanvas'),
+            $menuContent = $menuInstance.find('.offcanvas-content'),
+            $menuItem = $menuInstance.find('.offcanvas-menu'),
+            menuOpenClass = 'is-open';
+
+        var closeListener = function (e) {
+            e.preventDefault();
+            console.log('click');
+            $menuInstance.removeClass(menuOpenClass);
+        };
+
+        $menuSwitcher.on('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            if ($menuInstance.hasClass(menuOpenClass)) {
+                $menuContent.off('click', closeListener);
+            }
+            else {
+                $menuContent.on('click', closeListener);
+            }
+
+            $menuInstance.toggleClass(menuOpenClass);
+        });
+
+        $menuItem.on('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+        });
 
     })();
 });

@@ -29,4 +29,38 @@
       }
     }
   }
+  &.menu-header-inner {
+    .menu {
+      &-list {
+        display: table;
+        height: 87px;
+      }
+
+      &-item {
+        display: table-cell;
+        height: 100%;
+        vertical-align: middle;
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 0 10px;
+
+        &:hover {
+          background: #362b0f;
+        }
+      }
+    }
+  }
+  &.menu-offcanvas {
+    .menu-link {
+      display: block;
+      padding: gutter();
+      text-decoration: none;
+      text-transform: uppercase;
+
+      &:hover {
+        background: #362b0f;
+      }
+    }
+  }
 }

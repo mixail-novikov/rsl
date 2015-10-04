@@ -1,5 +1,30 @@
 .b-social {
-  &.social-footer {
+  &.social-header {
+    &.header-inner {
+      text-align: right;
+      margin: 0 -8px;
+
+      .social {
+        &-item {
+          display: inline-block;
+          margin: 0 8px;
+          vertical-align: middle;
+        }
+
+        &-link {
+          text-decoration: none;
+        }
+
+        @media (max-width: 760px) {
+          &-heading {
+            display: block;
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+  &.social-small {
     .social {
       text-align: right;
       margin-left: -15px;
